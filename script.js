@@ -26,7 +26,7 @@ function setGame() {
 
     // Reset game status and remove previous animations
     gameStatus.textContent = '';
-    gameStatus.classList.remove('correct', 'wrong'); // Remove previous animations
+    gameStatus.classList.remove('correct', 'wrong'); 
 }
 
 function checkGuess(selectedColor) {

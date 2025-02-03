@@ -62,7 +62,7 @@ body {
   .new-game:hover {
     background-color: #45a049;
   }
-  
+
   /* Initial styles for the game status message */
 #gameStatus {
     font-size: 24px;
@@ -101,4 +101,22 @@ body {
   
   .wrong {
     animation: fadeOut 1s ease-in-out forwards; /* Apply fade-out animation */
+  }
+
+  @media (min-width: 1200px) {
+    /* Larger screen adjustments */
+    .color-box {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .color-button {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .color-options {
+      display: flex;
+      justify-content: space-between;
+    }
   }
