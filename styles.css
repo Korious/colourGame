@@ -63,3 +63,42 @@ body {
     background-color: #45a049;
   }
   
+  /* Initial styles for the game status message */
+#gameStatus {
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Fade effect for the wrong answer */
+    animation-duration: 1s; /* Default animation duration */
+    display: inline-block;
+  }
+  
+  /* Fade-out animation for wrong answers */
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* Celebration animation for correct answers */
+  @keyframes celebration {
+    0% {
+      transform: scale(1);
+      color: green;
+    }
+    50% {
+      transform: scale(1.5);
+      color: #32CD32; /* Lime green for celebration */
+    }
+    100% {
+      transform: scale(1);
+      color: green;
+    }
+  }
+  
+  .correct {
+    animation: celebration 1s ease-in-out forwards; /* Apply celebration animation */
+  }
+  
+  .wrong {
+    animation: fadeOut 1s ease-in-out forwards; /* Apply fade-out animation */
+  }
